@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-import { BoardListItem } from './BoardListItem.js';
+import BoardListItem from './BoardListItem.js';
 
 const ComponentList = () => {
   const data = [

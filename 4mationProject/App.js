@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import BoardScreen from './screens/BoardScreen.js';
+import HomeScreen from './screens/HomeScreen.js';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,8 +14,9 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={styles.container}>
-      <BoardScreen/>
-      <StatusBar style="auto" />
+      <HomeScreen/>
     </View>
   );
 }
+
+
