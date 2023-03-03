@@ -13,7 +13,7 @@ const BoardListItem = (props) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: 'left',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
     padding: 10,
   },

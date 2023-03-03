@@ -1,12 +1,18 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import ComponentList from '../components/ComponentList.js';
 
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+});
 
 const BoardScreen = () => {
   return (
-    <View>
-      <ComponentList />
+    <View  style={styles.container}>
+      <ComponentList/>
     </View>
   );
 };

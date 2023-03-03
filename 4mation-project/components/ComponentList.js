@@ -12,7 +12,7 @@ const ComponentList = () => {
   ];
 
   const renderItem = ({ item }) => (
-    <BoardListItem boardName={item.name} boardOwnerName={item.owner} />
+    <BoardListItem boardName={item.name} boardOwnerName={item.owner}/>
   );
 
   return (
