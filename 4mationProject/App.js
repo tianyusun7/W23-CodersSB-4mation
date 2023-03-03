@@ -15,8 +15,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <BoardScreen/>
+      <StatusBar style="auto" />
     </View>
   );
 }
-
-
