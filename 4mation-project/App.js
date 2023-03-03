@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import BoardScreen from './screens/BoardScreen.js';
 
 const styles = StyleSheet.create({
   container: {
@@ -14,8 +14,7 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World 2023!</Text>
-      <StatusBar style="auto" />
+      <BoardScreen></BoardScreen>
     </View>
   );
 }
