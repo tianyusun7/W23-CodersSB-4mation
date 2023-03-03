@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import ComponentList from './components/ComponentList.js';
+import ComponentList from '../components/ComponentList.js';
 
 
 const BoardScreen = () => {
