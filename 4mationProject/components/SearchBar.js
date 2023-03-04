@@ -1,7 +1,16 @@
-import React from 'react';
 import React, { useState } from 'react';
 import { View, TextInput } from 'react-native';
 
+const styles = StyleSheet.create({
+  SearchBar: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    flex: 1,
+  },
+})
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -11,7 +20,7 @@ const SearchBar = () => {
   };
 
   return (
-    <View>
+    <View style= {styles.searchbar}>
       <TextInput
         placeholder="Search"
         onChangeText={handleSearch}

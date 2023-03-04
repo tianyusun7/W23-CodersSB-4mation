@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
       fontSize: 16,
       fontWeight: 'bold',
     },
+    button: {
+      flex: 1,
+      justifyingContent: 'left',
+      alignItems: 'left',
+    }
   });
   
 const JoinedBoardSidePanel = () => {
@@ -20,7 +25,7 @@ const JoinedBoardSidePanel = () => {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={styles.button}>
             <Button title= "Board Joined" onPress = {whenPress}/>
         </View>
     );

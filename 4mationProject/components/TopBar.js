@@ -9,24 +9,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
   },
-  text: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  SearchBar: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    flex: 1,
-  },
-  JoinedBoardSidePanel: {
-    flex: 1,
-    justifyingContent: 'left',
-    alignItems: 'left',
-  }
-
 });
 
 
