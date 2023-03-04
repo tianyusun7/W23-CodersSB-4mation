@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'stretch',
     justifyContent: 'space-between',
     padding: 10,
   },
@@ -18,6 +18,7 @@ const BoardListItem = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{props.boardName}</Text>
+      <Text>-</Text>
       <Text>{props.boardOwnerName}</Text>
     </View>
   );
