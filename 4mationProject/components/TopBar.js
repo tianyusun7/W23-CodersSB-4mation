@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import SearchBar from './SearchBar.js';
-import JoinedBoardSidePanel from './JoinedBoardSidePanel.js';
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -12,11 +12,14 @@ const styles = StyleSheet.create({
 });
 
 
-const TopBar = () => {
+const TopBar = ({ navigation }) => {
   return (
     <View style={styles.container} >
       <SearchBar/>
-      <JoinedBoardSidePanel/>
+      <Button
+        title="Profile"
+        onPress={() => navigation.navigate('ProfileScreen')}
+      />
     </View>
   );
 };

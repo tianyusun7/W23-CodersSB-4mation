@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import ComponentList from '../components/ComponentList.js';
-import TopBar from '../components/TopBar.js';
+
 
 const styles = StyleSheet.create({
   container: {
@@ -10,13 +9,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const HomeScreen = ({ navigation }) => {
+const ProfileScreen = () => {
   return (
     <View style={styles.container}>
-      <TopBar navigation={navigation}/>
-      <ComponentList/>
+    <Text>This is the profile screen</Text>
     </View>
   );
 };
 
-export default HomeScreen;
+export default ProfileScreen;
