@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet, Button, Text } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -7,19 +7,30 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'space-between',
     padding: 10,
+    flex: 1, 
+  }, 
+  linkContainer: {
+    flex: 1,
+    alignItems: 'center', // add this line to center the child items vertically
+    justifyContent: 'center', // add this line to center the child items horizontally
   },
-  text: {
-    fontSize: 16,
-    fontWeight: 'bold',
+  link: {
+    color: 'green',
+    textDecorationLine: 'underline',
   },
 });
 
 const BoardListItem = (props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{props.boardName}</Text>
-      <Text>-</Text>
-      <Text>{props.boardOwnerName}</Text>
+      <View style={ styles.linkContainer }>
+        <Text
+          style={styles.link}
+          onPress={() => props.navigation.navigate('Board', { id: props.id })}
+        >
+          {`${props.boardName} - ${props.boardOwnerName}`}
+        </Text>
+      </View>
     </View>
   );
 };

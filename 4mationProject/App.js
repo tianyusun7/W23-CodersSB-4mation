@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
 import HomeScreen from './screens/HomeScreen.js';
 import ProfileScreen from './screens/ProfileScreen.js';
+import BoardScreen from './screens/BoardScreen.js';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,8 +22,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Board" component={BoardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

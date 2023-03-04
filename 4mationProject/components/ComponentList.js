@@ -2,17 +2,17 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import BoardListItem from './BoardListItem.js';
 
-const ComponentList = () => {
+const ComponentList = ({ navigation }) => {
   const data = [
-    { id: 1, name: 'boardName1', owner: 'owner1' },
-    { id: 2, name: 'boardName2', owner: 'owner2' },
-    { id: 3, name: 'boardName3', owner: 'owner3' },
-    { id: 4, name: 'boardName4', owner: 'owner4' },
-    { id: 5, name: 'boardName5', owner: 'owner5' },
+    { id: 0, name: 'anime', owner: 'sdf4' },
+    { id: 1, name: 'programming', owner: 'asdasd' },
+    { id: 2, name: 'tv shows', owner: 'abc' },
+    { id: 3, name: 'music', owner: 'yhhhh6677' },
+    { id: 4, name: 'video games', owner: 'uluyffhhf6' },
   ];
 
   const renderItem = ({ item }) => (
-    <BoardListItem boardName={item.name} boardOwnerName={item.owner}/>
+    <BoardListItem id={item.id} navigation={navigation} boardName={item.name} boardOwnerName={item.owner}/>
   );
 
   return (

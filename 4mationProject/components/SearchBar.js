@@ -3,12 +3,13 @@ import { View, TextInput, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   SearchBar: {
-    height: 40,
-    borderColor: 'gray',
+    borderColor: 'black',
     borderWidth: 1,
     borderRadius: 5,
-    paddingHorizontal: 10,
+    paddingLeft: 10,
+    marginRight: 5,
     flex: 1,
+    height: 36, 
   },
 })
 const SearchBar = () => {
@@ -20,9 +21,9 @@ const SearchBar = () => {
   };
 
   return (
-    <View style= {styles.searchbar}>
+    <View style= {styles.SearchBar}>
       <TextInput
-        placeholder="Search"
+        placeholder="search a board"
         onChangeText={handleSearch}
         value={searchTerm}
       />

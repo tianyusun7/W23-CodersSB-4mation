@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import SearchBar from './SearchBar.js';
+import CustomButton from './CustomButton';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,9 +17,17 @@ const TopBar = ({ navigation }) => {
   return (
     <View style={styles.container} >
       <SearchBar/>
-      <Button
+      <CustomButton
         title="Profile"
-        onPress={() => navigation.navigate('ProfileScreen')}
+        onPress={() => navigation.navigate('Profile')}
+        buttonStyle={{
+          backgroundColor: 'white',
+          borderColor: 'black',
+          borderWidth: 1,
+        }}
+        textStyle={{
+          color: 'black',
+        }}
       />
     </View>
   );

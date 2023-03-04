@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-      flexDirection: 'row',
+      flexDirection: 'column',
       alignItems: 'stretch',
       justifyContent: 'space-between',
       padding: 10,
@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
 
 const BoardInfo = (props) => {
     return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{props.boardName}</Text>
-      <Text style={styles.text}>{props.boardOwnerName}</Text>
-      <Text style={styles.text}>{props.creationDate}</Text>
-      <Text style={styles.text}>{props.numberOfMembers}</Text>
-      <Text style={styles.text}>{props.boardDescription}</Text>
-    </View>
+      <View style={styles.container}>
+        <Text style={styles.text}>{props.boardName}</Text>
+        <Text style={styles.text}>owner: {props.boardOwnerName}</Text>
+        <Text style={styles.text}>date created: {props.creationDate}</Text>
+        <Text style={styles.text}>Number of members: {props.numberOfMembers}</Text>
+        <Text style={styles.text}>{props.boardDescription}</Text>
+      </View>
     );
 };
 

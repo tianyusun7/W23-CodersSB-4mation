@@ -14,7 +14,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <TopBar navigation={navigation}/>
-      <ComponentList/>
+      <ComponentList navigation={navigation}/>
     </View>
   );
 };
