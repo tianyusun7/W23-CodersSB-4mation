@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ProfileScreen = () => {
+const ProfileScreen = (props) => {
   return (
     <View style={styles.container}>
     <Text>This is the profile screen</Text>

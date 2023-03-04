@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     height: 36, 
   },
 })
-const SearchBar = () => {
+const SearchBar = ({ defaultText }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (text) => {
@@ -23,7 +23,7 @@ const SearchBar = () => {
   return (
     <View style= {styles.SearchBar}>
       <TextInput
-        placeholder="search a board"
+        placeholder={defaultText}
         onChangeText={handleSearch}
         value={searchTerm}
       />

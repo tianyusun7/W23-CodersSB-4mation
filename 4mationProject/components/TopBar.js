@@ -13,10 +13,10 @@ const styles = StyleSheet.create({
 });
 
 
-const TopBar = ({ navigation }) => {
+const TopBar = ({ navigation, defaultText }) => {
   return (
     <View style={styles.container} >
-      <SearchBar/>
+      <SearchBar defaultText={defaultText}/>
       <CustomButton
         title="Profile"
         onPress={() => navigation.navigate('Profile')}

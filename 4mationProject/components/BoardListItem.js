@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Button, Text } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,7 +26,7 @@ const BoardListItem = (props) => {
       <View style={ styles.linkContainer }>
         <Text
           style={styles.link}
-          onPress={() => props.navigation.navigate('Board', { id: props.id })}
+          onPress={() => props.navigation.navigate('Board', { id: props.id, navigation: props.navigation })}
         >
           {`${props.boardName} - ${props.boardOwnerName}`}
         </Text>

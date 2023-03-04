@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import TopBar from '../components/TopBar.js';
 import BoardInfo from '../components/BoardInfo';
+import { boardInfoData } from '../TestData.js'
 
 const styles = StyleSheet.create({
     container: {
@@ -11,18 +13,12 @@ const styles = StyleSheet.create({
 
 
 
-const BoardScreen = ({id}) => {
-  const data = [
-    {boardName: 'boardName1', boardOwnerName: 'owner', creationDate: '03/03/2023', numberOfMembers: 12, boardDescription: 'abc'},
-    {boardName: 'boardName2', boardOwnerName: 'owner', creationDate: '03/03/2023', numberOfMembers: 12, boardDescription: 'abc'},
-    {boardName: 'boardName3', boardOwnerName: 'owner', creationDate: '03/03/2023', numberOfMembers: 12, boardDescription: 'abc'},
-    {boardName: 'boardName4', boardOwnerName: 'owner', creationDate: '03/03/2023', numberOfMembers: 12, boardDescription: 'abc'},
-    {boardName: 'boardName5', boardOwnerName: 'owner', creationDate: '03/03/2023', numberOfMembers: 12, boardDescription: 'abc'},
-  ]
-
+const BoardScreen = (props) => {
+  const { id, navigation } = props.route.params;
   return (
     <View style={styles.container}>
-      <BoardInfo boardData={data[1]} />
+      <TopBar navigation={navigation} defaultText="search a post"/>
+      <BoardInfo {...boardInfoData[id]} />
     </View>
   );
 };

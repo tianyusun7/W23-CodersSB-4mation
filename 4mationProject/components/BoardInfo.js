@@ -21,7 +21,7 @@ const BoardInfo = (props) => {
         <Text style={styles.text}>owner: {props.boardOwnerName}</Text>
         <Text style={styles.text}>date created: {props.creationDate}</Text>
         <Text style={styles.text}>Number of members: {props.numberOfMembers}</Text>
-        <Text style={styles.text}>{props.boardDescription}</Text>
+        <Text style={styles.text}>Description: {props.boardDescription}</Text>
       </View>
     );
 };
