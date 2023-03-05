@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flexDirection: 'column',
-      alignItems: 'stretch',
+      alignItems: 'center',
       justifyContent: 'space-between',
       padding: 10,
     },
