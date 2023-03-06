@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import VoteBarItem from './VoteBarItem';
 
 const styles = StyleSheet.create({
   container: {
@@ -17,7 +18,9 @@ const styles = StyleSheet.create({
 const VoteBar = (props) => {
   return (
     <View style={styles.container}>
-      <Text>VoteBar</Text>
+      <VoteBarItem type='upvote' num={props.numUpvotes}/>
+      <VoteBarItem type='downvote' num={props.numDownvotes}/>
+      <VoteBarItem type='comment' num={props.numComments}/>
     </View>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import SearchBar from './SearchBar.js';
 import CustomButton from './CustomButton';
 
@@ -24,6 +24,7 @@ const TopBar = ({ navigation, defaultText }) => {
           backgroundColor: 'white',
           borderColor: 'black',
           borderWidth: 1,
+          height: 36,
         }}
         textStyle={{
           color: 'black',
