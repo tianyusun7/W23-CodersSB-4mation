@@ -5,8 +5,7 @@ repository for CodersSB W23 project series team 10 - 4mation
 React Native
 
 # Description
-functionalities include but are not limited to 
-- Online discussion forum
+an online mobile discussion forum with functionalities include but are not limited to 
 - High Accessibility
 - Anonymous user friendly 
 - Boards, posts, comments
