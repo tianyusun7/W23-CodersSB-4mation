@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import PopupDialog, { SlideAnimation } from 'react-native-popup-dialog';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from '../firebase';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isDialogVisible, setIsDialogVisible] = useState(false);
+
+  const showErrorMessage = (message) => {
+    setErrorMessage(message);
+    setIsDialogVisible(true);
+  };
+  const hideErrorMessage = () => {
+    setIsDialogVisible(false);
+  };
 
   const handleSignUp = async () => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -17,7 +28,7 @@ const LoginScreen = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
+      showErrorMessage(errorMessage);
     });
   };
 
@@ -31,7 +42,7 @@ const LoginScreen = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorMessage);
+      showErrorMessage(errorMessage);
     });
   };
 
@@ -66,6 +77,15 @@ const LoginScreen = () => {
             <Text style={styles.buttonText}>Anonymous</Text>
         </TouchableOpacity>
       </View>
+      <PopupDialog
+        visible={isDialogVisible}
+        onTouchOutside={() => hideErrorMessage()}
+        dialogAnimation={new SlideAnimation({ slideFrom: 'bottom' })}
+      >
+        <View style={{padding: 15}}>
+          <Text style={{fontSize: 16}} >{errorMessage}</Text>
+        </View>
+      </PopupDialog>
     </View>
   );
 };
