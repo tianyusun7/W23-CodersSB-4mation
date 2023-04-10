@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, Button } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import ComponentList from '../components/ComponentList.js';
 import TopBar from '../components/TopBar.js';
 import { boardListData } from '../TestData.js'

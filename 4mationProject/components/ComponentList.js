@@ -3,7 +3,6 @@ import { FlatList } from 'react-native';
 import BoardListItem from './BoardListItem.js';
 import PostListItem from './PostListItem.js';
 
-
 const ComponentList = ({ navigation, data }) => {
   const renderItem = ({ item }) => {
     // choose what component to render based on item.type
