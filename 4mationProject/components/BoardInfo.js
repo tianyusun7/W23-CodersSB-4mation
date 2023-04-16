@@ -1,19 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-    container: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      padding: 10,
-    },
-    text: {
-      fontSize: 16,
-      fontWeight: 'bold',
-    },
-  });
-
 const BoardInfo = (props) => {
     return (
       <View style={styles.container}>
@@ -25,6 +12,19 @@ const BoardInfo = (props) => {
       </View>
     );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
 
 export default BoardInfo;
 

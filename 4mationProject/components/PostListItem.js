@@ -2,6 +2,17 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import VoteBar from './VoteBar';
 
+
+const PostListItem = (props) => {
+  return (
+    <View style={styles.container}>
+      <Text>posted by: {props.postAuthor} at {props.postTime}</Text>
+      <Text style={styles.text}>{props.postTitle}</Text>
+      <VoteBar numUpvotes={props.numUpvotes} numDownvotes={props.numDownvotes} numComments={props.numComments}/>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -14,15 +25,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-const PostListItem = (props) => {
-  return (
-    <View style={styles.container}>
-      <Text>posted by: {props.postAuthor} at {props.postTime}</Text>
-      <Text style={styles.text}>{props.postTitle}</Text>
-      <VoteBar numUpvotes={props.numUpvotes} numDownvotes={props.numDownvotes} numComments={props.numComments}/>
-    </View>
-  );
-};
 
 export default PostListItem;

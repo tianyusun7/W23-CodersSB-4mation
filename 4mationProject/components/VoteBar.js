@@ -2,6 +2,16 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import VoteBarItem from './VoteBarItem';
 
+const VoteBar = (props) => {
+  return (
+    <View style={styles.container}>
+      <VoteBarItem type='upvote' num={props.numUpvotes}/>
+      <VoteBarItem type='downvote' num={props.numDownvotes}/>
+      <VoteBarItem type='comment' num={props.numComments}/>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -14,15 +24,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-
-const VoteBar = (props) => {
-  return (
-    <View style={styles.container}>
-      <VoteBarItem type='upvote' num={props.numUpvotes}/>
-      <VoteBarItem type='downvote' num={props.numDownvotes}/>
-      <VoteBarItem type='comment' num={props.numComments}/>
-    </View>
-  );
-};
 
 export default VoteBar;

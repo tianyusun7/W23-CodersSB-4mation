@@ -2,17 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import CustomButton from './CustomButton';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 16,
-  },
-});
-
 const VoteBarItem = (props) => {
   return (
     <View style={styles.container}>
@@ -33,5 +22,16 @@ const VoteBarItem = (props) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    fontSize: 16,
+  },
+});
 
 export default VoteBarItem;

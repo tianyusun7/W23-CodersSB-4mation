@@ -3,16 +3,6 @@ import { View, StyleSheet } from 'react-native';
 import SearchBar from './SearchBar.js';
 import CustomButton from './CustomButton';
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
-    padding: 10,
-  },
-});
-
-
 const TopBar = ({ navigation, defaultText }) => {
   return (
     <View style={styles.container} >
@@ -33,5 +23,15 @@ const TopBar = ({ navigation, defaultText }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+});
+
 
 export default TopBar;

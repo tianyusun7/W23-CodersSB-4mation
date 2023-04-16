@@ -6,14 +6,6 @@ import { boardInfoData } from '../TestData.js'
 import { PostListData } from '../TestData.js'
 import ComponentList from '../components/ComponentList.js';
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-    },
-});
-
-
 
 const BoardScreen = (props) => {
   const { id, navigation } = props.route.params;
@@ -25,5 +17,12 @@ const BoardScreen = (props) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
 
 export default BoardScreen;

@@ -4,13 +4,6 @@ import ComponentList from '../components/ComponentList.js';
 import TopBar from '../components/TopBar.js';
 import { boardListData } from '../TestData.js'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-});
-
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -19,5 +12,12 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
 
 export default HomeScreen;

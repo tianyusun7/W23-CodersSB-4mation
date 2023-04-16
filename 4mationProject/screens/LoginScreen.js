@@ -4,7 +4,7 @@ import PopupDialog, { SlideAnimation } from 'react-native-popup-dialog';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { auth } from '../firebase';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -23,7 +23,7 @@ const LoginScreen = () => {
     .then((userCredential) => {
       // Signed up and in 
       const user = userCredential.user;
-      // ...
+      navigation.navigate('Home')
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -31,13 +31,12 @@ const LoginScreen = () => {
       showErrorMessage(errorMessage);
     });
   };
-
   const handleLogin = async () => {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      // ...
+      navigation.navigate('Home')
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -45,14 +44,13 @@ const LoginScreen = () => {
       showErrorMessage(errorMessage);
     });
   };
-
   const handleAnonymousLogin = () => {
-
+    navigation.navigate('Home')
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>XXXX</Text>
+      <Text style={styles.title}>Login/Sign up</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"

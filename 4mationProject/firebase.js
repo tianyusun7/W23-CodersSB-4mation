@@ -19,5 +19,8 @@ const firebaseConfig = {
 
 app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+const db = getFirestore(app);
+
+
 
 // see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase

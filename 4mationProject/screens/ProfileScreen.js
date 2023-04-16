@@ -1,25 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text, Button, TextInput, Alert } from 'react-native';
 
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: `#6495ed`,
-  },
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
-
 const ProfileScreen = ({navigation}) => {
   const [name, onChangeName] = React.useState('');
 
@@ -60,5 +41,24 @@ const ProfileScreen = ({navigation}) => {
     </View>
   );
 };
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: `#6495ed`,
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+});
 
 export default ProfileScreen;

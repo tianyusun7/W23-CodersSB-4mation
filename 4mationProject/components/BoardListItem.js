@@ -1,6 +1,21 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
+const BoardListItem = (props) => {
+  return (
+    <View style={styles.container}>
+      <View style={ styles.linkContainer }>
+        <Text
+          style={styles.link}
+          onPress={() => props.navigation.navigate('Board', { id: props.id, navigation: props.navigation })}
+        >
+          {`${props.boardName} - ${props.boardOwnerName}`}
+        </Text>
+      </View>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
@@ -19,20 +34,5 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
 });
-
-const BoardListItem = (props) => {
-  return (
-    <View style={styles.container}>
-      <View style={ styles.linkContainer }>
-        <Text
-          style={styles.link}
-          onPress={() => props.navigation.navigate('Board', { id: props.id, navigation: props.navigation })}
-        >
-          {`${props.boardName} - ${props.boardOwnerName}`}
-        </Text>
-      </View>
-    </View>
-  );
-};
 
 export default BoardListItem;
