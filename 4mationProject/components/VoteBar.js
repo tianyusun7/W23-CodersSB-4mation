@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import VoteBarItem from './VoteBarItem';
+// can be used in PostLiistItem,
 
 const VoteBar = (props) => {
   return (

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import SearchBar from './SearchBar.js';
 import CustomButton from './CustomButton';
+// displayed in almost every screen
 
 const TopBar = ({ navigation, defaultText }) => {
   return (

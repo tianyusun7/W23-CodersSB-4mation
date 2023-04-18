@@ -2,6 +2,8 @@ import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
 const BoardListItem = (props) => {
+  // Data flow: HomeScreen -> ComponentList -> BoardListItem -> BoardScreen
+  // TODO: relace id with the actual board document id. 
   return (
     <View style={styles.container}>
       <View style={ styles.linkContainer }>

@@ -13,14 +13,24 @@ const ProfileScreen = ({navigation}) => {
         onChangeText = {name => onChangeName(name)}
       /> 
       <Button
-        title="MyBoards"
+        title="Joined Boards"
+        color="#f194ff"
+        onPress={() => Alert.alert('Navigating to JoinedBoardsScreen')}
+      />
+      <Button
+        title="My Boards"
         color="#f194ff"
         onPress={() => Alert.alert('Navigating to boards')}
       />
       <Button
-        title="MyPosts/Comments"
+        title="My Posts"
         color="#f194ff"
-        onPress={() => Alert.alert('Navigating to your posts and comments')}
+        onPress={() => Alert.alert('Navigating to your posts')}
+      />
+      <Button
+        title="My Comments"
+        color="#f194ff"
+        onPress={() => Alert.alert('Navigating to your comments')}
       />
       <Button
         title="Saved"

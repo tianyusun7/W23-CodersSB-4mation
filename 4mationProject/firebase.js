@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, query, orderBy, limit, doc, getDoc, collection, where, getDocs } from "firebase/firestore";
 // Optionally import the services that you want to use
 // import {...} from "firebase/database";
 // import {...} from "firebase/functions";
@@ -19,7 +19,72 @@ const firebaseConfig = {
 
 app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+
 const db = getFirestore(app);
+
+export async function getBoardListData(sortby, descending) {
+  const q = query(collection(db, "boards"), descending ? orderBy(sortby, "desc") : orderBy(sortby), limit(50));
+  const querySnapshot = await getDocs(q);
+  const data = [];
+  console.log(querySnapshot.size);
+  for (let i = 0; i < querySnapshot.size; i++) {
+    const doc = querySnapshot.docs[i];
+    const docData = doc.data();
+    const ownerDoc = await getDoc(docData.owner);
+    const ownerDocData = ownerDoc.data();
+    data.push({id: i, type: 0, boardId: doc.id, boardName: docData.name, boardOwnerName: ownerDocData.name});
+  }
+  return data;
+}
+
+export async function getBoardInfoData(boardId) {
+  // this function will be used in BoardScreen
+  // TODO: get data from a single board document from firestore
+  
+  return {}
+} 
+
+export async function getPostListData(boardId, sortby, descending) {
+  //input types: string, string, boolean
+  // this function will be used in BoardScreen
+  //TODO: get a list of data to be used in PostListItem components. see PostListData in TestData. similar to getBoardListData
+
+  return []
+}
+
+export async function getPostData(postId) {
+  // used in PostScreen
+  // post content, basic post info. etc...
+  return {}
+}
+
+export async function getCommentListData(postId, sortby, descending) {
+  // used in PostScreen
+  // get comments replying directly to a post
+  return []
+}
+
+export async function getSubcommentListData(commentId, sortby, descending) {
+  // used in SubcommentScreen
+  // get the subcomments of a comment
+  return []
+}
+
+export async function getUserInfo(uid) {
+  // used in ProfileScreen
+}
+export async function getUserBoards(uid, joined) {
+  // boolean parameter joined. if false: return only boards owned by the user
+  // used in MyBoardsScreen 
+}
+export async function getUserPosts(uid) {
+  // used in MyPostsScreen
+}
+export async function getUserComments(uid) {
+  // used in MyCommentsScreen
+}
+
+
 
 
 

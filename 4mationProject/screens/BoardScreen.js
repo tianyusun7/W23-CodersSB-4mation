@@ -9,6 +9,10 @@ import ComponentList from '../components/ComponentList.js';
 
 const BoardScreen = (props) => {
   const { id, navigation } = props.route.params;
+  /*
+  TODO: replace boardInfoData and PostListData with data from the actual backend
+  follow the example in HomeScreen to learn how to display a loading text while fetching data
+  */
   return (
     <View style={styles.container}>
       <TopBar navigation={navigation} defaultText="search a post"/>

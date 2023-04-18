@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+// placed at the top of board screen, detailing the board's basic info
+
 
 const BoardInfo = (props) => {
     return (

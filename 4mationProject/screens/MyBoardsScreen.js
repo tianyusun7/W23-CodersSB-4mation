@@ -1,0 +1,1 @@
+// prop joined indicates whether to display a list of boards owned or joined by a user
