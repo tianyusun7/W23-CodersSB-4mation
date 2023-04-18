@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import SearchBar from './SearchBar.js';
 import CustomButton from './CustomButton';
 // displayed in almost every screen
+// TODO: Profile button would direct to the sign up/in page if no current user is signed in
 
 const TopBar = ({ navigation, defaultText }) => {
   return (

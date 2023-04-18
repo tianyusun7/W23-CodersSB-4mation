@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, StyleSheet, Text, Button, TextInput, Alert } from 'react-native';
 
+// would need to load the current signed in user and fetch that user's information
+// the profile screen should not be reached if there is no currently signed in user
+
 const ProfileScreen = ({navigation}) => {
   const [name, onChangeName] = React.useState('');
 

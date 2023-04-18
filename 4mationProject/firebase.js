@@ -18,10 +18,17 @@ const firebaseConfig = {
   };
 
 app = initializeApp(firebaseConfig);
+
+// AUTHENTICATION
 export const auth = getAuth(app);
+export function getCurrentUser() {
+  // use this function when you need information about the current signed in user
+  // null is returned when no user is signed in -> anonymous use of the app
+  return auth.currentUser;
+}
 
+// DATABASE
 const db = getFirestore(app);
-
 export async function getBoardListData(sortby, descending) {
   const q = query(collection(db, "boards"), descending ? orderBy(sortby, "desc") : orderBy(sortby), limit(50));
   const querySnapshot = await getDocs(q);
@@ -85,6 +92,11 @@ export async function getUserComments(uid) {
 }
 
 
+export async function createBoard(uid, boardName, boardDescription) {
+
+}
+// define more backend functions that create documents in the backend 
+// more functions
 
 
 
