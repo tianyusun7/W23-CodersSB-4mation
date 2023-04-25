@@ -8,12 +8,21 @@ import ComponentList from '../components/ComponentList.js';
 
 
 const BoardScreen = (props) => {
-  const { id, navigation } = props.route.params;
-  /*
-  TODO: replace boardInfoData and PostListData with data from the actual backend
-  follow the example in HomeScreen to learn how to display a loading text while fetching data
-  */
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function fetchData() {
+      const result = await getBoardListData("numMembers", true);
+      setData(result);
+      setLoading(false);
+      }
+    fetchData();
+    }, []);
+    if (loading) {
+      return <Loading></Loading>;
+    }
   return (
+    
     <View style={styles.container}>
       <TopBar navigation={navigation} defaultText="search a post"/>
       <BoardInfo {...boardInfoData[id]} />
